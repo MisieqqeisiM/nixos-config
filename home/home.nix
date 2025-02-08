@@ -1,6 +1,7 @@
 {config, pkgs, ...} : {
   imports = [
     ./hyprland.nix
+    ./kitty.nix
   ];
   home = {
     username = "suspicious_goo";
