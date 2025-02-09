@@ -19,6 +19,7 @@
     nixd
     nil
     xdg-utils
+    hyprshot
   ];
 
 

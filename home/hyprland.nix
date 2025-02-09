@@ -7,7 +7,7 @@
       "$mainMod" = "SUPER";
 
       monitor = [
-	"HDMI-A-1, 1920x1080, 0x0, 1"
+        "HDMI-A-1, 1920x1080, 0x0, 1"
       	"DP-1, 1920x1080, 1920x0, 1"
       	"DVI-D-1, 1920x1080, 3840x0, 1"
       ];
@@ -16,7 +16,7 @@
         "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
-        "XCURSOR_SIZE,36"
+        "XCURSOR_SIZE,24"
         "QT_QPA_PLATFORM,wayland"
         "XDG_SCREENSHOTS_DIR,~/screens"
         "LIBVA_DRIVER_NAME,nvidia"
@@ -100,6 +100,11 @@
         # Exec
         "$mainMod, Return, exec, kitty"
         "$mainMod, D, exec, wofi --show drun"
+
+        # Screenshots
+        "$mainMod, PRINT, exec, hyprshot -m window -z -s --clipboard-only"
+        ", PRINT, exec, hyprshot -m output -z -s --clipboard-only"
+        "SHIFT, PRINT, exec, hyprshot -m region -z -s --clipboard-only"
       ];
 
       bindm = [
