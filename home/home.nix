@@ -2,6 +2,7 @@
   imports = [
     ./hyprland.nix
     ./kitty.nix
+    ./zed.nix
   ];
   home = {
     username = "suspicious_goo";

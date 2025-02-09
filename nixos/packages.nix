@@ -13,6 +13,12 @@
     xclip
     glxinfo
     wofi
+    xwaylandvideobridge
+    pipewire
+    wireplumber
+    nixd
+    nil
+    xdg-utils
   ];
 
 

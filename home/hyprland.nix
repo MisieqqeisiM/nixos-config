@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -19,6 +19,10 @@
         "XCURSOR_SIZE,36"
         "QT_QPA_PLATFORM,wayland"
         "XDG_SCREENSHOTS_DIR,~/screens"
+        "LIBVA_DRIVER_NAME,nvidia"
+        "__GLX_VENDOR_LIBRARY_NAME,nvidia"
+        "NVD_BACKEND,direct"
+        "ELECTRON_OZONE_PLATFORM_HINT,wayland"
       ];
 
       debug = {
@@ -74,7 +78,7 @@
           "workspaces,  1, 6,  default"
         ];
       };
-      
+
       bind = [
         # Controls
         "$mainMod, Q, killactive"
@@ -97,7 +101,7 @@
         "$mainMod, Return, exec, kitty"
         "$mainMod, D, exec, wofi --show drun"
       ];
-      
+
       bindm = [
         "$mainMod, mouse:272, movewindow"
         "$mainMod, mouse:273, resizewindow"

@@ -6,7 +6,7 @@
       ./locale.nix
       ./nvidia.nix
     ];
-  
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   boot.loader.systemd-boot.enable = true;
@@ -14,6 +14,32 @@
 
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
+
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+    withUWSM = true;
+  };
+
+  xdg.portal = {
+    enable = true;
+    xdgOpenUsePortal = false;
+    config = {
+      common = {
+        default = [ "gtk" ];
+      };
+    };
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  };
+
+  security.rtkit.enable = true;
+
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+  };
 
   programs.fish.enable = true;
 
