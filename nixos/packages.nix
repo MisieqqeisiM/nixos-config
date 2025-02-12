@@ -20,6 +20,13 @@
     nil
     xdg-utils
     hyprshot
+    (lutris.override {
+      extraLibraries =  pkgs: [
+
+      ];
+    })
+    steam
+    deno
   ];
 
 
